@@ -28,5 +28,5 @@ grunt doc
 ```
 
 ## Contact
-* Issues: <https://bitbucket.org/mutopia/atlas-cesium/issues>
+
 * Email: <support@urbanetic.net>
