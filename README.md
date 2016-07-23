@@ -3,10 +3,6 @@
 An implementation of [Atlas](https://bitbucket.org/urbanetic/atlas) in
 [Cesium](http://cesiumjs.org/).
 
-## About
-
-[More Info](http://urbanetic.net/atlas/atlas-cesium/)
-
 ## Install
 ```
 npm install
