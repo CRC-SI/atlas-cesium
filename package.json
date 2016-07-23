@@ -27,7 +27,9 @@
     "postinstall": "bower install && grunt install",
     "build": "npm install && grunt build",
     "buildDev": "npm install && grunt build:no-minify",
-    "test": "grunt test"
+    "docs": "grunt doc",
+    "test": "grunt test",
+    "test-ci": "grunt test-ci"
   },
   "devDependencies": {
     "bower": "^1.7.9",
