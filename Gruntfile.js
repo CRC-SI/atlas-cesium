@@ -204,7 +204,8 @@ module.exports = function(grunt) {
       },
       continuous: {
         singleRun: true,
-        browsers: ['PhantomJS', 'Firefox']
+        // PhantomJS fails, doesn't support WebGL
+        browsers: ['Firefox']
       },
       debug: {
         // Click DEBUG on Karma page and open Dev Tools. Refresh to re-run.
