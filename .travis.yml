@@ -6,6 +6,9 @@ install:
   - npm install
 before_script:
   - npm run build
+  # Clone and build Atlas to make code available for testing
+  - git clone https://github.com/urbanetic/atlas.git ../atlas
+  - npm --prefix ../atlas run build
   # Firefox addon support
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
