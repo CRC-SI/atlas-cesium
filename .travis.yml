@@ -6,11 +6,14 @@ install:
   - npm install
 before_script:
   - npm run build
+  # Firefox addon support
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
 script:
-  - echo "skipping tests"
+  - npm run test-ci
 after_success:
-  - cat ./coverage/lcov.dat | ./node_modules/coveralls/bin/coveralls.js
-  - grunt doc
+#  - cat ./coverage/lcov.dat | ./node_modules/coveralls/bin/coveralls.js
+  - npm run docs
 
 # Deploy JSDocs to S3 static site.
 # See http://docs.travis-ci.com/user/deployment/s3/
@@ -24,8 +27,11 @@ deploy:
   bucket: jsdocs.atlas.urbanetic.net
   endpoint: jsdocs.atlascesium.urbanetic.net.s3-website-ap-southeast-2.amazonaws.com
   region: ap-southeast-2
-  local-dir: docs
+  local-dir: jsdocs
   skip_cleanup: true
   on:
     all_branches: true
 #    tags: true
+addons:
+  firefox: "39.0"
+

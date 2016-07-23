@@ -24,13 +24,15 @@
     "url": "ssh://git@bitbucket.org/urbanetic/atlas-cesium"
   },
   "scripts": {
-    "postinstall": "grunt install",
+    "postinstall": "bower install && grunt install",
     "build": "npm install && grunt build",
     "buildDev": "npm install && grunt build:no-minify",
-    "test": "grunt test"
+    "docs": "grunt doc",
+    "test": "grunt test",
+    "test-ci": "grunt test-ci"
   },
   "devDependencies": {
-    "bower": "~1.2.8",
+    "bower": "^1.7.9",
     "glob": "^4.0.2",
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.12",
