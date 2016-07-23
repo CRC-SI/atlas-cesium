@@ -1,7 +1,7 @@
 # Atlas-Cesium
 
-** An implementation of [Atlas](https://bitbucket.org/urbanetic/atlas) in
-[Cesium](http://cesiumjs.org/). **
+An implementation of [Atlas](https://bitbucket.org/urbanetic/atlas) in
+[Cesium](http://cesiumjs.org/).
 
 ## About
 
@@ -29,5 +29,5 @@ grunt doc
 ```
 
 ## Contact
-* Issues: <https://bitbucket.org/urbanetic/atlas-cesium/issues>
+* Issues: <https://github.com/urbanetic/atlas-cesium/issues>
 * Email: <support@urbanetic.net>
