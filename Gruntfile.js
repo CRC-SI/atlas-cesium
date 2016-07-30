@@ -196,7 +196,7 @@ module.exports = function(grunt) {
         runnerPort: 9878,
       },
       unit: {
-        browsers: ['Chrome', 'Firefox']
+        browsers: ['Firefox']
       },
       local: {
         browsers: ['Firefox'],
@@ -204,7 +204,7 @@ module.exports = function(grunt) {
       },
       continuous: {
         singleRun: true,
-        browsers: ['PhantomJS', 'Firefox']
+        browsers: ['Firefox']
       },
       debug: {
         // Click DEBUG on Karma page and open Dev Tools. Refresh to re-run.
