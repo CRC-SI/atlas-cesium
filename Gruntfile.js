@@ -111,7 +111,7 @@ module.exports = function(grunt) {
           stdout: true
         },
         command: [
-          'rm -rf docs',
+          'rm -rf jsdocs',
               path.join('node_modules', '.bin', 'jsdoc') + ' -c jsdoc.conf.json -l'
         ].join('&&')
       },
@@ -164,6 +164,9 @@ module.exports = function(grunt) {
     },
 
     clean: {
+      options: {
+        force: true
+      },
       dist: {
         files: [
           {
@@ -201,7 +204,7 @@ module.exports = function(grunt) {
       },
       continuous: {
         singleRun: true,
-        browsers: ['PhantomJS']
+        browsers: ['PhantomJS', 'Firefox']
       },
       debug: {
         // Click DEBUG on Karma page and open Dev Tools. Refresh to re-run.
@@ -312,6 +315,9 @@ module.exports = function(grunt) {
   grunt.registerTask('doc', 'Generates documentation.', ['shell:jsdoc']);
 
   grunt.registerTask('test', 'Runs unit tests', ['force:karma:unit', 'sed:fixCoverageOutput']);
+
+  grunt.registerTask('test-ci', 'Runs tests in continuous integration mode',
+      ['karma:continuous', 'sed:fixCoverageOutput']);
 
   //////////////////////////////////////////////////////////////////////////////////////////////////
   // AUXILIARY
