@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.org/urbanetic/atlas-cesium"
+    "url": "ssh://git@github.com/urbanetic/atlas-cesium.git"
   },
   "scripts": {
     "postinstall": "bower install && grunt install",
     "build": "npm install && grunt build",
-    "buildDev": "npm install && grunt build:no-minify",
+    "buildDev": "npm install && grunt build:no-minify:module-url",
     "docs": "grunt doc",
     "test": "grunt test",
     "test-ci": "grunt test-ci"

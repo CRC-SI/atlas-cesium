@@ -33,10 +33,10 @@ Generate JSDocs in `docs/` with:
 
 ## Contact
 
-* Issues: <https://bitbucket.org/urbanetic/atlas-cesium/issues>
+* Issues: <https://github.com/urbanetic/atlas-cesium/issues>
 * Email: <support@urbanetic.net>
 
 
-[atlas]: https://bitbucket.org/urbanetic/atlas
-[cesium]: http://cesiumjs.org/
-[info]: http://urbanetic.net/atlas/atlas-cesium/
+[atlas]: https://github.com/urbanetic/atlas
+[cesium]: http://cesiumjs.org
+[info]: http://urbanetic.net/atlas/atlas-cesium
