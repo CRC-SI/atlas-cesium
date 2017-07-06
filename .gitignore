@@ -1,4 +1,5 @@
 *.sublime-workspace
+package-lock.json
 
 # Generated files #
 ###################
