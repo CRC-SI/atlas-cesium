@@ -117,14 +117,14 @@ module.exports = function(grunt) {
       },
 
       // Compile JS source files.
-      build: {
+      buildDev: {
         options: {
-          stdout: false, stderr: true, failOnError: true
+          stdout: true, stderr: true, failOnError: true
         },
         command: 'node node_modules/requirejs/bin/r.js -o ' + BUILD_FILE + ' optimize=none'
       },
 
-      buildMinify: {
+      build: {
         options: {
           stdout: false, stderr: true, failOnError: true
         },
@@ -303,7 +303,7 @@ module.exports = function(grunt) {
           });
         };
     addTasks('compile-imports', 'clean:dist');
-    hasArgs('no-minify') ? addTasks('shell:build') : addTasks('shell:buildMinify');
+    hasArgs('no-minify') ? addTasks('shell:buildDev') : addTasks('shell:build');
     addTasks('build-workers', 'copy:workers', 'copy:resources', 'clean:resourcesLess', 'less',
         'fix-build-style');
     hasArgs('module-url') && addTasks('fix-module-url');
